@@ -7,12 +7,12 @@ EMBED1="gemini-embedding-001"
 EMBED2= "gemini-embedding-2-preview"
 EMBED3= "models/gemini-embedding-2"
 
-text=[" This is",
-    "a sample text for embedding",
-     "for testing purpose and experiment"
+text=[" This is a sample text for embedding",
+    "For testing purpose and experiment",
+     "AI is the Future"
 ]
 
-print(type(text))
+#print(type(text))
 embeddings = GoogleGenerativeAIEmbeddings(
         model=EMBED3,
         output_dimensionality=64
