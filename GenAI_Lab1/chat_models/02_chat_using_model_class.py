@@ -8,7 +8,7 @@ load_dotenv()  # ← automatically finds .env in current or parent folder
 
 #model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
 
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite",temperature=.9,max_token=200) #WITH TOKEN LIMIT
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite",temperature=.9,max_tokens=200) #WITH TOKEN LIMIT
 
 response = model.invoke("Who are Agentic AI")
 
