@@ -1,0 +1,5 @@
+Hello, I am Learning Gen AI
+This is a sample document for text splitter
+Chunk Size Testing
+
+Double space given to check the chunking
