@@ -18,14 +18,23 @@ EMBED3= "gemini-embedding-2"
 
 embedding_model = GoogleGenerativeAIEmbeddings(model=EMBED3)
 
-vectorstore = Chroma.from_documents(
+vectorstore1 = Chroma.from_documents(
     documents = docs,
     embedding= embedding_model,
     persist_directory= "chroma-db"
 )
 
-result = vectorstore.similarity_search("what is used for data analysis?",k=3)
+result = vectorstore1.similarity_search("what is used for data analysis?",k=3)
+
 
 for r in result:
     print(r.page_content)
     print(r.metadata)
+    
+
+retriver = vectorstore1.as_retriever() #Convert the vector store into a standardized "Retriever" interface
+
+docs = retriver.invoke("Explain deep learning")  #Query the retriever with a natural language string. 
+
+for d in docs:
+    print(d.page_content)
