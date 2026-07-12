@@ -24,12 +24,12 @@ EMBED1="gemini-embedding-001"
 EMBED2= "gemini-embedding-2-preview"
 EMBED3= "gemini-embedding-2"
 
-embedding_model = GoogleGenerativeAIEmbeddings(model=EMBED1)
+embedding_model = GoogleGenerativeAIEmbeddings(model=EMBED3)
 
 vectore_store = Chroma.from_documents(
     documents = chunks,
     embedding = embedding_model,
-    persist_directory= "chome-db-main"
+    persist_directory= "chroma-db-main"
     )
 
 
