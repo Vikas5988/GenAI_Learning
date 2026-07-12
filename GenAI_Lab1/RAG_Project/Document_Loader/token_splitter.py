@@ -13,7 +13,8 @@ docs=data.load()
 chunks = Splitter.split_documents(docs)
 
 print(len(chunks))
-print(docs[6].page_content)
+
+print(chunks[6].page_content)
 
 
 
