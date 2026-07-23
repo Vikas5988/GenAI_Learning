@@ -41,3 +41,5 @@ response=model.invoke(final_prompt)
 print(response.content)
 
 movie_data_cleaned = parser.parse(response.content)
+
+print(movie_data_cleaned)

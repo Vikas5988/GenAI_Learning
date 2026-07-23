@@ -14,8 +14,8 @@ data=PyPDFLoader("Document_Loader/aws_lambda_guide.pdf")
 docs=data.load()
 
 Splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 200,
-    chunk_overlap = 10
+    chunk_size = 600,
+    chunk_overlap = 100
 )
 
 chunks = Splitter.split_documents(docs)
