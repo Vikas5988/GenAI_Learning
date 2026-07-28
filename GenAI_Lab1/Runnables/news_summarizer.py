@@ -24,12 +24,16 @@ chain = prompt | model | parser
 
 news_result = search_tool.run("Latest news about Cricket series by India")
 
-print(news_result)
+#print(news_result)
 result = chain.invoke({"news": news_result})
 
 print(result)
+print("*" * 100)
 
+print("Search tool description : ",search_tool.description)
+print("*" * 100)
 
-print(search_tool.description)
-print(search_tool.name)
-print(search_tool.args)
+print("Search tool name : ",search_tool.name)
+print("*" * 100)
+
+print("Search tool argument : ",search_tool.args)
