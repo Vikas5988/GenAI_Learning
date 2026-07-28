@@ -27,7 +27,7 @@ result = llm_with_tool.invoke(
     "Hello friends, Today we are learning LangChain tools"
 )
 
-# print(result)  # Inspect the raw AI response
+#print(result)  # Inspect the raw AI response
 
 # Check if the LLM requested a tool
 if result.tool_calls:
