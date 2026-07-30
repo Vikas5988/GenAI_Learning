@@ -2,6 +2,7 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 #import google.genai as genai
+from rich import print
 
 load_dotenv()  # ← automatically finds .env in current or parent folder
 
