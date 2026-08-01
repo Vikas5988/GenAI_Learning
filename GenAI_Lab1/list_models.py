@@ -1,4 +1,4 @@
-import google.generativeai as genai
+import google.genai as genai
 import os
 from dotenv import load_dotenv
 #import google.genai as genai
@@ -9,11 +9,12 @@ load_dotenv()  # ← automatically finds .env in current or parent folder
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 #print(dir(genai))
-genai.configure(api_key= GOOGLE_API_KEY)
+#genai.configure(api_key= GOOGLE_API_KEY)
 
+client = genai.Client(api_key=GOOGLE_API_KEY)
 
 try:
-    models = list(genai.list_models())
+    models = list(client.models.list())
     print(f"✅ Key valid! {len(models)} models available.")
     for m in models:
         print(" -", m.name)
